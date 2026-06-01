@@ -2,9 +2,10 @@ import datetime as dt
 import random
 import smtplib
 import pandas
+import os 
 
-my_email = "skij217@gmail.com"
-my_password = "adlcrsvgfyitqwqs"
+MY_EMAIL = os.environ.get("MY_EMAIL")
+MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
 def send_birthday_email(name,to_email):
     letter_number = random.randint(1,3)
